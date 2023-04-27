@@ -9,5 +9,3 @@ jobs:
     steps:
       - name: run demo
         run: pwd
-        run: ls -al
-        
