@@ -1,4 +1,4 @@
-name: echo demo
+name: cmake demo
 on:
   push:
     branches: [main]
@@ -7,5 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: run demo
-        run: pwd
+      - name: configure
+        working-directory: ${{github.workspace}}/build
+        run: cmake ..
+      - name: configure
+        working-directory: ${{github.workspace}}/build
+        run: make -j7
+        
