@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: mkdir-build
+        working-directory: ${{github.workspace}}
+        run: mkdir build
       - name: configure
         working-directory: ${{github.workspace}}/build
         run: cmake ..
